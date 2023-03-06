@@ -1,11 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .flex-container{
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
     list-style-type: none;
     font-weight: bold;
+    padding-left: 20%;
+}
+li{
+    padding-right: 10px;
+    padding-left: 10px;
 }
 a{
     text-decoration: none;
     color: black;
+}
+.main{
+    position: absolute;
+    top: 40px;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #9a54ff;
+    background: linear-gradient(#6322ff, #e42eff);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: grey;
+    width: 100%;
+    height: 60px;
 }
