@@ -1,27 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Edzeseink</title>
-    <link rel="icon" href="IMG/dumbell.png"/>
-    <link rel="stylesheet" href="CSS/main.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fooldal</title>
+  <link rel="icon" href="IMG/dumbell.png"/>
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <body>
-<header>
-    <div class="menu">
-        <ul>
-            <li><a aria-current="page" href="index.html">Főoldal</a></li>
-            <li><a href="edzeseink.html">Edzéseink</a></li>
-            <li><a href="edzestipusok.html">Edzés Típusok</a></li>
-            <li><a href="edzoink.html">Edzőink</a></li>
-            <li><a href="elerhetoseg.html">Elerhetőség</a></li>
-            <li><a href="araink.html">Áraink</a></li>
-        </ul>
+<div class="page">
+
+  
+<div class="content">
+  <header>
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="edzeseink.html">EDZÉSEINK</a></li>
+            <li><a href="edzestipusok.html">EDZÉS TíPUSOK</a></li>
+            <li><a href="edzoink.html">EDZŐINK</a></li>
+            <li><a href="elerhetoseg.html">ELÉRHETŐSÉG</a></li>
+            <li><a href="araink.html">ÁRAINK</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </header>
+
+  <h1>ÓRARENDÜNK</h1>
+  <table class="myTimetable"> 
+    <thead>
+      <tr>
+        <th>HÉTFŐ</th>
+        <th>KEDD</th>
+        <th>SZERDA</th>
+        <th>CSÜTÖRTÖK</th>
+        <th>PÉNTEK</th>     
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>P1</td>
+        <td>
+          <div class="subject">Maths</div>
+          <div class="room">A120</div>
+        </td>
+        <td>
+          <div class="subject">Art</div>
+          <div class="room">C1</div>
+        </td>
+        <td>        
+          <div class="subject">English</div>
+          <div class="room">B21</div>
+        </td>
+        <td>        
+          <div class="subject">Maths</div>
+          <div class="room">A120</div>
+        </td>
+         <td>        
+           <div class="subject">Geography</div>
+          <div class="room">B101</div>
+        </td>     
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>        
+          <div class="subject">Science</div>
+          <div class="room">Lab1</div>
+        </td>
+        <td>        
+          <div class="subject">History</div>
+          <div class="room">B104</div>
+        </td>
+        <td>        
+          <div class="subject">Spanish</div>
+          <div class="room">C17</div>
+        </td>
+        <td>        
+          <div class="subject">P.E.</div>
+          <div class="room">A Gym</div>
+        </td>
+        <td>        
+          <div class="subject">Maths</div>
+          <div class="room">A120</div>
+        </td>
+      </tr>
+        <tr>
+        <td colspan="6" class="break">Break</td>
+        </tr>
+        <tr>
+        <td>P3</td>
+        <td>        
+          <div class="subject">I.T.</div>
+          <div class="room">ICT 1</div>
+        </td>
+        <td>        
+          <div class="subject">English</div>
+          <div class="room">B21</div>
+        </td>
+        <td>        
+          <div class="subject">Musique</div>
+          <div class="room">C5</div>
+        </td>
+        <td>        
+          <div class="subject">English</div>
+          <div class="room">B21</div>
+        </td>
+        <td>        
+          <div class="subject">PSHE</div>
+          <div class="room">A24</div>
+        </td>
+      </tr>
+        <tr>
+        <td colspan="6" class="lunch">Lunch</td>
+      </tr>
+        <tr>
+        <td>P4</td>
+        <td>        
+          <div class="subject">History</div>
+          <div class="room">B104</div>
+        </td>
+        <td>        
+          <div class="subject">Drama</div>
+          <div class="room">C17</div>
+        </td>
+        <td>        
+          <div class="subject">Maths</div>
+          <div class="room">A120</div>
+        </td>
+        <td>        
+          <div class="subject">Geography</div>
+          <div class="room">B101</div>
+        </td>
+        <td>        
+          <div class="subject">P.E.</div>
+          <div class="room">A Gym</div>
+        </td>
+      </tr>
+        <tr>
+        <td>P5</td>
+        <td>        
+          <div class="subject">Spanish</div>
+          <div class="room">C17</div>
+        </td>
+        <td>        
+          <div class="subject">Science</div>
+          <div class="room">Lab1</div>
+        </td>
+        <td>        
+          <div class="subject">English</div>
+          <div class="room">B21</div>
+        </td>
+        <td>        
+          <div class="subject">Science</div>
+          <div class="room">Lab1</div>
+        </td>
+        <td>        
+          <div class="subject">R.E.</div>
+          <div class="room">B18</div>
+        </td>
+      </tr>
+     </tbody>
+    </table>
+
+  </table>
+
+  <footer>   <!--ide esetleg inkább ilyen emailcím telefonszám elemeket helyezhetnél mert fent már van menü 34:00p a vidiben-->
+    <div class="footer">
+      <div class="bottom-text">
+        <a class="active" href="#home">HOME</a>
+        <a href="#news">NEWS</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#about">ABOUT</a>
+      </div>
     </div>
-    <img src="IMG/dumbell.png" class="logo">
-</header>
-<body>
+  </footer>
+</div>
+</div>
+
+
+
+
+
+<script>
+
+  var navLinks = document.getElementById("navLinks");
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+</script>
 
 </body>
 </html>

@@ -1,48 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Araink</title>
-    <link rel="icon" href="IMG/dumbell.png"/>
-    <link rel="stylesheet" href="CSS/main.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fooldal</title>
+  <link rel="icon" href="IMG/dumbell.png"/>
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <body>
-<header>
-    <div class="menu">
-        <ul>
-            <li><a aria-current="page" href="index.html">Főoldal</a></li>
-            <li><a href="edzeseink.html">Edzéseink</a></li>
-            <li><a href="edzestipusok.html">Edzés Típusok</a></li>
-            <li><a href="edzoink.html">Edzőink</a></li>
-            <li><a href="elerhetoseg.html">Elerhetőség</a></li>
-            <li><a href="araink.html">Áraink</a></li>
-        </ul>
+<div class="page">
+
+  
+<div class="content">
+  <header>
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="edzeseink.html">EDZÉSEINK</a></li>
+            <li><a href="edzestipusok.html">EDZÉS TíPUSOK</a></li>
+            <li><a href="edzoink.html">EDZŐINK</a></li>
+            <li><a href="elerhetoseg.html">ELÉRHETŐSÉG</a></li>
+            <li><a href="araink.html">ÁRAINK</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </header>
+
+<section class="row">
+  <div class="price">
+    <h1>ÁRAINK</h1>
+    <p>Csoportosan, egyedül vagy személyi edző segítségével edzenél?
+      Bérleteink közt mindegyikre találsz megoldást!</p>
+      <div class="price-col">
+        <h3>10 ALKALMAS</h3>
+        <h1 class="ar">12500 ft</h1>
+      </div>
+      <div class="price-col">
+        <h3>KORLÁTLAN</h3>
+        <h1 class="ar">14500 ft</h1>
+      </div>
+      <div class="price-col">
+        <h3>KEZDŐ 15 ALKALMAS</h3>
+        <h1 class="ar">17000ft</h1>
+      </div>
+  </div>
+
+</section>
+  
+  <footer>   <!--ide esetleg inkább ilyen emailcím telefonszám elemeket helyezhetnél mert fent már van menü 34:00p a vidiben-->
+    <div class="footer">
+      <div class="bottom-text">
+        <a class="active" href="#home">HOME</a>
+        <a href="#news">NEWS</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#about">ABOUT</a>
+      </div>
     </div>
-    <img src="IMG/dumbell.png" class="logo">
-</header>
-    <body>
-        <h1>Áraink</h1>
-        <h3>Egyedül, személyedzővel, vagy akár csoportosan is, de nálunk mindenképp megtalálod a számodra megfelelő bérletet</h3>
-        <div class="flex-container">
-            <div>
-                <h2>10 alkalmas</h2>
-                <p>Elsősorban csoportos edzésre ajánljuk, de egyéni edzésre és személyi edzésre is alkalmas</p>
-            </div>
-            <div>
-                <h2>Korlátlan</h2>
-                <p>Elsősorban csoportos edzésre ajánljuk, de egyéni edzésre és személyi edzésre is alkalmas korlátlan alkalommal</p>
-            </div>
-            <div>
-                <h2>
-                    Diák
-                </h2>
-                <p>Elsősorban csoportos edzésre ajánljuk, de egyéni edzésre és személyi edzésre is alkalmas</p>
-            </div>
-            <div>
-                <h2>Napijegy</h2>
-                <div>Alkalmas csoportos, egyéni edzésre és személyi edzésre</div>
-            </div>
-          </div>
-    </body>
+  </footer>
+</div>
+</div>
+
+
+
+
+
+<script>
+
+  var navLinks = document.getElementById("navLinks");
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+</script>
+
+</body>
 </html>
