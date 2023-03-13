@@ -10,7 +10,7 @@ html {
 
 body {
     flex-grow: 1;
-    height: 100%;
+    height: 100vh;
     position: relative;
 }
 
@@ -28,17 +28,40 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
 }
+.content div h1{
+    color: #f44336;
+    font-size: 25px;
+    margin: 50px;
+}
+.content div h2{
+    display: flex;
+    margin-top: 10px;
+    color: #fff3f3;
+    font-size: 20px;
+}
+.content div h3{
+    position: relative;
+    bottom: -100px;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff3f3;
+    font-size: 15px;
+}
 .row{
-    margin: 5%;
     display: flex;
     justify-content: space-between;
+}
+.types{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
 }
 .types-col{
     flex-basis: 31%;
@@ -55,25 +78,38 @@ body {
     }
 }
 .price-col{
-    flex-basis: 31%;
+    display: flex;
+    justify-content: space-between;
+}
+.price-item{
     background: #fff3f3;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
+    width: 46%;
+
 }
-h3{
-   text-align: center;
-   font-weight: 600;
+.price h1{
+    color: #f44336;
+}
+.price p{
+    color: #fff3f3;
+}
+.price-item h3{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
     margin: 10px 0;
+}
+.price-item h1{
+    font-size: 15px;
 }
 h5{
     text-align: center;
     margin: 10px 0;
 }
 .types-col:hover{
-    box-shadow: 0 0 20px 0 rgba();
+    box-shadow: 0 0 20px 0 #f44336;
 }
 
 .page {
@@ -105,16 +141,25 @@ nav {
 .nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .nav-links ul li::after{
-    content: '';
+    /* content: '';
     width: 100%;
     height: 2px;
     background: #f44336;
     display: block;
-    margin: auto;
+    margin: auto; */
+
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f44336;
+    position: absolute;
+    left: 0;
+    bottom: -0.5px;
+    transition: 0.5s;
 }
 
 .nav-links ul li:hover::after{
@@ -126,16 +171,19 @@ nav {
 }
 
 footer{
+    position: absolute;
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 0;
 }
 footer a{
     text-decoration: none;
     color: #fff;
     margin: 10px;
+    font-size: 12px;
 }
 
 .text-box{
@@ -206,7 +254,6 @@ nav .fa-solid{
       color: #fff;  
       display: block;
       margin: 10px;
-      font-size: pointer; 
     }
 }
 
