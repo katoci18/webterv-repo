@@ -92,6 +92,25 @@ body {
     color: #fff3f3;
     font-size: 15px;
 }
+.content div h1{
+    color: #f44336;
+    font-size: 25px;
+    margin: 50px;
+}
+.content div h2{
+    display: flex;
+    margin-top: 10px;
+    color: #fff3f3;
+    font-size: 20px;
+}
+.content div h3{
+    position: relative;
+    bottom: -100px;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff3f3;
+    font-size: 15px;
+}
 .row{
     display: flex;
     justify-content: space-between;
