@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fooldal</title>
-  <link rel="icon" href="IMG/dumbell.png"/>
-  <link rel="stylesheet" href="CSS/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-</head>
-<body>
-<div class="page">
-
-  
-<div class="content">
-  <header>
-    <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" href="IMG/dumbell.png" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
         <div class="nav-links" id="navLinks">
           <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
           <ul>
@@ -29,52 +31,48 @@
           </ul>
         </div>
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-    </nav>
-  </header>
+      </nav>
+    </header>
+    <div class="page">
+      <div class="content">
+        <div class="text-box">
+          <h1>Cross és Funkcionális edzések</h1>
+          <p>
+            Ha egy igazán jót szeretnél edzeni, <br />
+            <strong>ne habozz tovább,</strong> <br />
+            rád is vár Szeged egyik legkedveltebb helye!
+          </p>
+          <a href="elerhetoseg.html" class="hero-btn"
+            >Jelentkezz óráinkra itt</a
+          >
+        </div>
 
-  <div class="text-box">
-    <h1>Cross és Funkcionális edzések</h1>
-    <p>Ha egy igazán jót szeretnél edzeni, <br> <strong>ne habozz tovább,</strong> <br> rád is vár Szeged egyik legkedveltebb helye!</p>
-    <a href="" class="hero-btn">Jelentkezz óráinkra itt</a>
-  </div>
-
-
-  <!--ide esetleg inkább ilyen emailcím telefonsám elemeket helyezhetnél mert fent már van menü 34:00p a vidiben-->
-  <footer>   
-    <div class="footer">
-      <div class="bottom-text">
-        <!--
-           <a class="active" href="#home">HOME</a>
-        <a href="#news">NEWS</a>
-        <a href="#contact">CONTACT</a>
-        <a href="#about">ABOUT</a>
-        -->
-        <h2>RÓLUNK</h2>
-        <p>Képzelj el egy edzést, amely több sportág mozgáselemét vegyíti, mint például az atlétikát, a súlyemelést, az evezést, az úszást, küzdősportot vagy a tornát. Az edzés sokszínűsége ellenére mégis egységes képet alkot, ugyanis mindent egyszerre fejleszt.</p>
-        <h2>SZEGEDI TERMÜNK</h2>
-        
+        <!--ide esetleg inkább ilyen emailcím telefonsám elemeket helyezhetnél mert fent már van menü 34:00p a vidiben-->
+        <footer>
+          <!--ide esetleg inkább ilyen emailcím telefonszám elemeket helyezhetnél mert fent már van menü 34:00p a vidiben-->
+          <div class="footer">
+            <div class="bottom-text">
+              <a href="index.html">HOME</a>
+              <a href="rolunk.html">ABOUT</a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
-  </footer>
-</div>
-</div>
 
-
-
-
-
-<script>
-
-  var navLinks = document.getElementById("navLinks");
-  function showMenu(){
-    navLinks.style.right = "0";
-  }
-  function hideMenu(){
-    navLinks.style.right = "-200px";
-  }
-</script>
-
-</body>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+      function getbutton() {
+        window.location("elerhetoseg.html");
+      }
+    </script>
+  </body>
 </html>
 
 <!--
