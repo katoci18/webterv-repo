@@ -39,16 +39,7 @@ body {
     color: #fff;
 }
 .content {
-<<<<<<< HEAD
     height: 100vh;
-=======
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../IMG/training.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-
->>>>>>> 7d27c90c49b5fce51c38432f7b36e8c1d0807e90
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,6 +166,7 @@ body {
     text-align: center;
     font-size: 15px;
     font-weight: 600;
+}
 .price-item h3{
     text-align: center;
     font-size: 15px;
@@ -246,7 +238,7 @@ nav {
     left: 0;
     bottom: -0.5px;
     transition: 0.5s;
-    margin: auto; */
+    margin: auto; 
 
     content: '';
     height: 3px;
