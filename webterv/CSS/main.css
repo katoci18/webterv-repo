@@ -17,7 +17,6 @@ html {
 body {
     flex-grow: 1;
     height: 100vh;
-    height: 100vh;
     position: relative;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../IMG/training.jpg");
     background-position: center center;
@@ -25,15 +24,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-/* .test {
-    position: absolute;
-    background-image: url("../IMG/training.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-} */
 
 #orarend{
     color: #fff;
@@ -65,52 +55,9 @@ body {
     color: #fff3f3;
     font-size: 15px;
 }
-.content div h1{
-    color: #f44336;
-    font-size: 25px;
-    margin: 50px;
-}
-.content div h2{
-    display: flex;
-    margin-top: 10px;
-    color: #fff3f3;
-    font-size: 20px;
-}
-.content div h3{
-    position: relative;
-    bottom: -100px;
-    display: flex;
-    justify-content: flex-end;
-    color: #fff3f3;
-    font-size: 15px;
-}
-.content div h1{
-    color: #f44336;
-    font-size: 25px;
-    margin: 50px;
-}
-.content div h2{
-    display: flex;
-    margin-top: 10px;
-    color: #fff3f3;
-    font-size: 20px;
-}
-.content div h3{
-    position: relative;
-    bottom: -100px;
-    display: flex;
-    justify-content: flex-end;
-    color: #fff3f3;
-    font-size: 15px;
-}
 .row{
     display: flex;
     justify-content: space-between;
-}
-.types{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 70px;
 }
 .types{
     display: flex;
@@ -126,6 +73,12 @@ body {
     box-sizing: border-box;
     transition: 0.5s;
 }
+.types-col h3{
+    color: black !important;
+    bottom: 10px !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+}
 @media(max-width: 700px){
     .row{
        flex-direction: column; 
@@ -138,53 +91,38 @@ body {
 .price-item{
     display: flex;
     justify-content: space-between;
-}
-.price-item{
     background: #fff3f3;
     border-radius: 10px;
     margin-bottom: 2%;
-    margin-bottom: 2%;
     padding: 20px 12px;
     width: 46%;
-
 }
 .price h1{
-    color: #f44336;
+    margin: 0 !important;
 }
 .price p{
     color: #fff3f3;
-    width: 46%;
+    width: 100%;
+    margin-bottom: 20px;
 
 }
-.price h1{
-    color: #f44336;
-}
-.price p{
-    color: #fff3f3;
-}
 .price-item h3{
     text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-}
-.price-item h3{
-    text-align: center;
-    font-size: 15px;
+    font-size: 20px !important;
     font-weight: 600;
     margin: 10px 0;
+    bottom: 0 !important;
+    color: black !important;
 }
 .price-item h1{
-    font-size: 15px;
-}
-.price-item h1{
-    font-size: 15px;
+    font-size: 15px !important;
+    margin-top: 10px !important;
 }
 h5{
     text-align: center;
     margin: 10px 0;
 }
 .types-col:hover{
-    box-shadow: 0 0 20px 0 #f44336;
     box-shadow: 0 0 20px 0 #f44336;
 }
 
@@ -218,18 +156,9 @@ nav {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    font-size: 20px;
 }
 
 .nav-links ul li::after{
-    /* content: '';
-    /* content: '';
-    width: 100%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto; */
-
     content: '';
     height: 3px;
     width: 0;
@@ -238,16 +167,7 @@ nav {
     left: 0;
     bottom: -0.5px;
     transition: 0.5s;
-    margin: auto; 
-
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #f44336;
-    position: absolute;
-    left: 0;
-    bottom: -0.5px;
-    transition: 0.5s;
+    margin: auto;
 }
 
 .nav-links ul li:hover::after{
@@ -260,20 +180,17 @@ nav {
 
 footer{
     position: absolute;
-    position: absolute;
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     bottom: 0;
-    bottom: 0;
 }
 footer a{
     text-decoration: none;
     color: #fff;
     margin: 10px;
-    font-size: 12px;
     font-size: 12px;
 }
 
@@ -423,109 +340,17 @@ table.h1 {
     flex-direction: column;
     justify-content: center;  
 }
-/*
-
-.background{
-    height: 320vh;
-    background-color: #292929;
-    background-size: cover;
+.trainers-col h1{
+    margin-bottom: 100px !important;
+    margin-top: -100px !important;
+    font-size: 35px !important;
 }
-
-.menu{
-    position: fixed;
-    margin-left: 25%;
-    width: 70%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 999;
-    background: black;
-    border-radius: 15px;
+.trainers h2{
+    color: #f44336 !important;
+    margin: 0 !important;
 }
-.menu ul li{
-    list-style: none;
-    display: inline-block;
-    position: relative;
-    margin: 5px 25px;
+.trainers h3{
+    bottom: 0 !important;
+    justify-content: center !important;
+    margin-bottom: 100px;
 }
-.menu ul li a{
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.menu ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: linear-gradient(#6322ff, #e42eff);
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.5s;
-}
-.menu ul li:hover::after{
-    width: 100%;
-}
-.text{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    max-height: 300px;
-    transform: translateY(-50%);
-    text-align: center;
-    color: whitesmoke;
-    font-size: 30px;
-}
-.text h1{
-    margin-bottom: 15px;
-}
-footer{
-    width: 100%;
-    height: 60px;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-footer a{
-    text-decoration: none;
-    color: #7c11ff;
-    margin: 10px;
-}
-.photo_bal{
-    width: 50%;
-    position: absolute;
-    margin-left: 10px;
-    top: 100%;
-    border-radius: 5%;
-}
-.photo_jobb{
-    width: 50%;
-    position: absolute;
-    margin-left: 49%;
-    top: 180%;
-    border-radius: 5%;
-}
-.jobb_szoveg{
-    position: absolute;
-    margin-left: 60%;
-    top: 110%;
-    color: #7c11ff;
-    font-size: 30px;
-    border-radius: 15px;
-    background: black;
-}
-.bal_szoveg{
-    position: absolute;
-    margin-left: 10%;
-    margin-right: 60%;
-    top: 200%;
-    color: #7c11ff;
-    font-size: 30px;
-    border-radius: 15px;
-    background: black;
-}
-
-*/
