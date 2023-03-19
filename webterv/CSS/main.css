@@ -179,13 +179,19 @@ nav {
 }
 
 footer{
-    position: absolute;
+    /*position: absolute;
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 0;*/
+
+    position: fixed;
+    left: 0;
     bottom: 0;
+    width: 100%;
+    height: 60px;    text-align: center;
 }
 footer a{
     text-decoration: none;
@@ -342,8 +348,10 @@ table.h1 {
 }
 .trainers-col h1{
     margin-bottom: 100px !important;
-    margin-top: -100px !important;
     font-size: 35px !important;
+    animation-name: beuszas;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
 .trainers h2{
     color: #f44336 !important;
@@ -353,4 +361,12 @@ table.h1 {
     bottom: 0 !important;
     justify-content: center !important;
     margin-bottom: 100px;
+}
+@keyframes beuszas {
+    from{
+        margin-top: -70%;
+    }
+    to{
+        margin-top: -150px
+    }
 }
