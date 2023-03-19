@@ -84,10 +84,15 @@ body{
     color: #fff;
 }
 .contactForm{
-    width: 40%;
+    width: 30%;
     padding: 40px;
     background: #fff;
     margin-right: 10%;
+    border-radius: 8px;
+}
+.contactForm:hover{
+    box-shadow: 0 0 20px 0 #f44336;
+    transition: 0.5s;
 }
 .contactForm h2{
     font-size: 30px;
@@ -139,7 +144,6 @@ body{
     background: #f44336;
     color: #fff;
     border: none;
-    cursor: 10px;
     font-size: 18px;
 }
 @media(max-width: 991px){

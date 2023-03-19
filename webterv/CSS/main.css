@@ -135,9 +135,13 @@ h5{
 
 
 nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(4,9,30,0.7);
+    z-index: 100;
+    border-radius: 20px;
 }
 
 .nav-links{
@@ -179,19 +183,12 @@ nav {
 }
 
 footer{
-    /*position: absolute;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0;*/
-
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;    text-align: center;
+    height: 60px;
+    text-align: center;
 }
 footer a{
     text-decoration: none;
@@ -230,6 +227,9 @@ footer a{
     background: transparent;
     position: relative;
     cursor: pointer;
+    width: 40%;
+    border-radius: 8px;
+    align-self: center;
 }
 
 .hero-btn:hover{
@@ -259,8 +259,8 @@ nav .fa-solid{
         height: 100vh;
         width: 200px;
         top: 0;
-        right: -200px;
         text-align: left;
+        right: -200px;
         z-index: 2;
         transition: 1s;
     }
@@ -344,7 +344,7 @@ table.h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
 }
 .trainers-col h1{
     margin-bottom: 100px !important;
@@ -369,4 +369,28 @@ table.h1 {
     to{
         margin-top: -150px
     }
+}
+.trainers p{
+    flex-basis: 50%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    color: black;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.trainers p:hover{
+    box-shadow: 0 0 20px 0 #f44336;
+    transition: 0.5s;
+}
+.price-item:hover{
+    box-shadow: 0 0 20px 0 #f44336;
+    transition: 0.5s;
+}
+.video{
+    position: relative;
+    bottom: 0;
 }
