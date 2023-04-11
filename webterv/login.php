@@ -36,7 +36,7 @@
     <title>Home</title>
     <link rel="icon" href="IMG/dumbell.png" />
     <link rel="stylesheet" href="CSS/main.css" />
-    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -60,29 +60,30 @@
                 <li><a href="elerhetoseg.php">ELÉRHETŐSÉG</a></li>
                 <li><a href="araink.php">ÁRAINK</a></li>
                 <li><a href="login.php">BEJELENTKEZÉS</a></li>
-
             </ul>
         </div>
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>
     </nav>
 </header>
 <main>
-    <section>
-        <div class="login">
-        <form action="login.php" method="POST">
-            <h2>Bejelentkezés</h2>
-          <label>Felhasználónév: <input type="text" name="felhasznalonev"/></label> <br/>
-          <label>Jelszó: <input type="password" name="jelszo"/></label> <br/>
-          <input type="submit" name="login"/> <br/><br/>
+    <div class="page animation">
+    <section><br/><br/><br/><br/>
+        <div class="signup">
+            <h2>Bejelentkezés:</h2>
+        <form action="login.php" method="POST"><br/><br/>
+            <label><input type="text" name="felhasznalonev"/>  Felhasználónév</label> <br/>
+            <label><input type="password" name="jelszo"/>  Jelszó</label> <br/>
+            <input type="submit" name="login" value="Bejelentkezés"/> <br/><br/>
         </form>
         </div>
-<div class="iranyito">
-    <a href="signup.php" class="hero-btn">Még nem regisztráltál?</a>
-</div>
-        <div class="message">
-        <?php echo $uzenet . "<br/>"; ?>
+        <div class="iranyito">
+            <a href="signup.php" class="hero-btn">Még nem regisztráltál?</a>
         </div>
-      </section>
+        <div class="message">
+            <?php echo $uzenet . "<br/>"; ?>
+        </div>
+    </section>
+    </div>
     </main>
   </body>
 </html>

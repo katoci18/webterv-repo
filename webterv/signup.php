@@ -78,7 +78,7 @@
     <title>Home</title>
     <link rel="icon" href="IMG/dumbell.png" />
     <link rel="stylesheet" href="CSS/main.css" />
-    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/signup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -109,12 +109,11 @@
     </nav>
 </header>
 <main>
-    <section>
-        <hr/>
-        <div class="regiszt"><h2>Regisztráció</h2>
-        </div>
+    <div class="page animation">
+        <section><br/><br/><br/><br/>
         <div class="signup">
-        <form action="signup.php" method="POST">
+            <h2>Regisztráció:</h2>
+        <form action="signup.php" method="POST"><br/><br/>
           <label><input type="text" name="felhasznalonev" value="<?php if (isset($_POST['felhasznalonev'])) echo $_POST['felhasznalonev']; ?>"/><strong>  Felhasználónév</strong></label> <br/>
           <label><input type="password" name="jelszo"/><strong>  Jelszó</strong></label> <br/>
           <label><input type="password" name="jelszo2"/><strong>  Jelszó ismét</strong></label> <br/>
@@ -144,6 +143,7 @@
         ?>
         </div>
       </section>
+    </div>
     </main>
   </body>
 </html>
