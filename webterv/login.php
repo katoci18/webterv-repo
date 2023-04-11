@@ -68,16 +68,20 @@
 </header>
 <main>
     <section>
-        <form class="login" action="login.php" method="POST">
+        <div class="login">
+        <form action="login.php" method="POST">
             <h2>Bejelentkezés</h2>
           <label>Felhasználónév: <input type="text" name="felhasznalonev"/></label> <br/>
           <label>Jelszó: <input type="password" name="jelszo"/></label> <br/>
           <input type="submit" name="login"/> <br/><br/>
         </form>
+        </div>
 <div class="iranyito">
     <a href="signup.php" class="hero-btn">Még nem regisztráltál?</a>
 </div>
+        <div class="message">
         <?php echo $uzenet . "<br/>"; ?>
+        </div>
       </section>
     </main>
   </body>

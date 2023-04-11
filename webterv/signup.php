@@ -110,26 +110,29 @@
 </header>
 <main>
     <section>
-        <h2>Regisztráció</h2>
         <hr/>
-
-        <form class="signup" action="signup.php" method="POST">
-          <label>Felhasználónév: <input type="text" name="felhasznalonev" value="<?php if (isset($_POST['felhasznalonev'])) echo $_POST['felhasznalonev']; ?>"/></label> <br/>
-          <label>Jelszó: <input type="password" name="jelszo"/></label> <br/>
-          <label>Jelszó ismét: <input type="password" name="jelszo2"/></label> <br/>
-          <label>Életkor: <input type="number" name="eletkor" value="<?php if (isset($_POST['eletkor'])) echo $_POST['eletkor']; ?>"/></label> <br/>
-          Nem:
+        <div class="regiszt"><h2>Regisztráció</h2>
+        </div>
+        <div class="signup">
+        <form action="signup.php" method="POST">
+          <label><input type="text" name="felhasznalonev" value="<?php if (isset($_POST['felhasznalonev'])) echo $_POST['felhasznalonev']; ?>"/><strong>  Felhasználónév</strong></label> <br/>
+          <label><input type="password" name="jelszo"/><strong>  Jelszó</strong></label> <br/>
+          <label><input type="password" name="jelszo2"/><strong>  Jelszó ismét</strong></label> <br/>
+          <label><input type="number" name="eletkor" value="<?php if (isset($_POST['eletkor'])) echo $_POST['eletkor']; ?>"/> <strong> Életkor</strong></label> <br/>
+            <strong> Nem:</strong> <br/>
           <label><input type="radio" name="nem" value="F" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'F') echo 'checked'; ?>/> Férfi</label>
           <label><input type="radio" name="nem" value="N" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'N') echo 'checked'; ?>/> Nő</label>
           <label><input type="radio" name="nem" value="E" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'E') echo 'checked'; ?>/> Egyéb</label> <br/>
-          Hobbik:
+            <strong> Hobbik:</strong> <br/>
           <label><input type="checkbox" name="hobbik[]" value="Futás" <?php if (isset($_POST['hobbik']) && in_array('Futás', $_POST['hobbik'])) echo 'checked'; ?>/> Futás</label>
           <label><input type="checkbox" name="hobbik[]" value="Biciklizés" <?php if (isset($_POST['hobbik']) && in_array('Biciklizés', $_POST['hobbik'])) echo 'checked'; ?>/> Biciklizés</label>
           <label><input type="checkbox" name="hobbik[]" value="Konditermi edzés" <?php if (isset($_POST['hobbik']) && in_array('Konditermi edzés', $_POST['hobbik'])) echo 'checked'; ?>/> Konditermi edzés</label>
           <label><input type="checkbox" name="hobbik[]" value="Otthoni edzés" <?php if (isset($_POST['hobbik']) && in_array('Otthoni edzés', $_POST['hobbik'])) echo 'checked'; ?>/> Otthoni edzés</label>
-          <input type="submit" name="regiszt"/> <br/><br/>
+          <br/>
+            <input type="submit" name="regiszt" value="Regisztráció"/> <br/><br/>
         </form>
-
+        </div>
+        <div class="message">
         <?php
           if (isset($siker) && $siker === TRUE) {  // ha nem volt hiba, akkor a regisztráció sikeres
             echo "<p>Sikeres regisztráció!</p>";
@@ -139,6 +142,7 @@
             }
           }
         ?>
+        </div>
       </section>
     </main>
   </body>
