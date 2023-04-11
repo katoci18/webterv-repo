@@ -29,7 +29,7 @@
             <li><a href="edzoink.php">EDZŐINK</a></li>
             <li><a href="elerhetoseg.php">ELÉRHETŐSÉG</a></li>
             <li><a href="araink.php">ÁRAINK</a></li>
-              <li><a href="bejelentkezes.php">BEJELENTKEZÉS</a></li>
+              <li><a href="login.php">BEJELENTKEZÉS</a></li>
           </ul>
         </div>
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>
