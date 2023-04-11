@@ -183,9 +183,9 @@ nav {
 }
 
 footer{
-    position: absolute;
+    position: relative;
     left: 0;
-    bottom: 0;
+    bottom: -10%;
     width: 100%;
     height: 60px;
     text-align: center;
@@ -340,11 +340,11 @@ table.h1 {
 .trainers-col{
     width: 90%;
     height: 100%;
-    color: black;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 50px;
 }
 .trainers-col h1{
     margin-bottom: 100px !important;
@@ -362,14 +362,7 @@ table.h1 {
     justify-content: center !important;
     margin-bottom: 100px;
 }
-@keyframes beuszas {
-    from{
-        margin-top: -70%;
-    }
-    to{
-        margin-top: -150px
-    }
-}
+
 .trainers p{
     flex-basis: 50%;
     background: #fff3f3;
@@ -390,7 +383,44 @@ table.h1 {
     box-shadow: 0 0 20px 0 #f44336;
     transition: 0.5s;
 }
-.video{
-    position: relative;
-    bottom: 0;
+.trainers video{
+    margin-bottom: 20px;
 }
+.animation{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.video p{
+    color: #fff3f3;
+    margin-bottom: 20px;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    color: whitesmoke;
+
+}
+.iranyito{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+.message{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+
