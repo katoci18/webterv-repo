@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
   <head>
@@ -29,8 +33,12 @@
             <li><a href="edzoink.php">EDZŐINK</a></li>
             <li><a href="elerhetoseg.php">ELÉRHETŐSÉG</a></li>
               <li><a href="araink.php">ÁRAINK</a></li>
-              <li><a href="login.php">BEJELENTKEZÉS</a></li>
-
+              <?php if (isset($_SESSION["user"])) { ?>
+                  <li><a href="profil.php">PROFIL</a></li>
+                  <li><a href="kijelentkezes.php">KIJELENTKEZÉS</a></li>
+              <?php } else { ?>
+                  <li><a href="login.php">BEJELENTKEZÉS</a></li>
+              <?php } ?>
           </ul>
         </div>
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>

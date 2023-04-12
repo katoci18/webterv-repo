@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
   <head>
@@ -32,12 +36,17 @@
         <div class="nav-links" id="navLinks">
           <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="edzeseink.php">EDZÉSEINK</a></li>
-            <li><a href="edzestipusok.php">EDZÉS TíPUSOK</a></li>
-            <li><a href="edzoink.php">EDZŐINK</a></li>
-            <li><a href="elerhetoseg.php">ELÉRHETŐSÉG</a></li>
-            <li><a href="araink.php">ÁRAINK</a></li>
-              <li><a href="login.php">BEJELENTKEZÉS</a></li>
+              <li><a href="edzeseink.php">EDZÉSEINK</a></li>
+              <li><a href="edzestipusok.php">EDZÉS TíPUSOK</a></li>
+              <li><a href="edzoink.php">EDZŐINK</a></li>
+              <li><a href="elerhetoseg.php">ELÉRHETŐSÉG</a></li>
+              <li><a href="araink.php">ÁRAINK</a></li>
+              <?php if (isset($_SESSION["user"])) { ?>
+                  <li><a href="profil.php">PROFIL</a></li>
+                  <li><a href="kijelentkezes.php">KIJELENTKEZÉS</a></li>
+              <?php } else { ?>
+                  <li><a href="login.php">BEJELENTKEZÉS</a></li>
+              <?php } ?>
           </ul>
         </div>
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>

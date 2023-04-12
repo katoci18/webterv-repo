@@ -1,5 +1,6 @@
 <?php
-  include "kozos.php";              // a loadUsers() függvény ebben a fájlban van
+session_start();
+include "kozos.php";              // a loadUsers() függvény ebben a fájlban van
   $fiokok = loadUsers("users.txt"); // betöltjük a regisztrált felhasználók adatait, és eltároljuk őket a $fiokok változóban
 
   $uzenet = "";                     // az űrlap feldolgozása után kiírandó üzenet
@@ -21,7 +22,8 @@
         // a jelszavakat hash alapján, a password_verify() függvénnyel hasonlítjuk össze
         if ($fiok["felhasznalonev"] === $felhasznalonev && password_verify($jelszo, $fiok["jelszo"])) {
           $uzenet = "Sikeres belépés!";        // ekkor átírjuk a megjelenítendő üzenet szövegét
-          break;                               // mivel találtunk illeszkedést, ezért a többi felhasználót nem kell megvizsgálnunk, kilépünk a ciklusból 
+            $_SESSION["user"] = $fiok;
+            header("Location: index.php");
         }
       }
     }
