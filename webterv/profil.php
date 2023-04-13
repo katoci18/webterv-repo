@@ -1,6 +1,60 @@
 <?php
+$uzenet = "";
+$latogatasok = 1;                         // hányszor látogattuk meg a weboldalt eddig
+
+// ha már van egy, az eddigi látogatások számát tároló sütink, akkor betöltjük annak az értékét
+if (isset($_COOKIE["visits"])) {
+    $latogatasok = $_COOKIE["visits"] + 1;  // az eddigi látogatások számát megnöveljük 1-gyel
+}
+
+// egy "visits" nevű süti a látogatásszám tárolására, amelynek élettartama 30 nap
+setcookie("visits", $latogatasok, time() + (60*60*24*30), "/");
+?>
+
+<?php
 session_start();
 ?>
+
+<?php
+if (isset($_FILES["profile-pic"])) {
+    // csak JPG, JPEG és PNG kiterjesztésű képeket szeretnénk engedélyezni a feltöltéskor
+    $engedelyezett_kiterjesztesek = ["jpg", "jpeg", "png"];
+
+    // a feltöltött fájl kiterjesztésének lekérdezése
+    $kiterjesztes = strtolower(pathinfo($_FILES["profile-pic"]["name"], PATHINFO_EXTENSION));
+
+    // ha a fájl kiterjesztése szerepel az engedélyezett kiterjesztések között...
+    if (in_array($kiterjesztes, $engedelyezett_kiterjesztesek)) {
+        // ha a fájl feltöltése sikeresen megtörtént...
+        if ($_FILES["profile-pic"]["error"] === 0) {
+            // ha a fájlméret nem nagyobb 30 MB-nál...
+            if ($_FILES["profile-pic"]["size"] <= 31457280) {
+                // a cél útvonal összeállítása
+                $cel = "IMG/" . $_FILES["profile-pic"]["name"];
+
+                // ha már létezik ilyen nevű fájl a cél útvonalon, figyelmeztetést írunk ki
+                if (file_exists($cel)) {
+                    $uzenet = "<strong>Figyelem:</strong> A régebbi fájl felülírásra kerül! <br/>";
+                }
+
+                // a fájl átmozgatása a cél útvonalra
+                if (move_uploaded_file($_FILES["profile-pic"]["tmp_name"], $cel)) {
+                    $uzenet = "Sikeres fájlfeltöltés! <br/>";
+                } else {
+                    $uzenet = "<strong>Hiba:</strong> A fájl átmozgatása nem sikerült! <br/>";
+                }
+            } else {
+                $uzenet = "<strong>Hiba:</strong> A fájl mérete túl nagy! <br/>";
+            }
+        } else {
+            $uzenet = "<strong>Hiba:</strong> A fájlfeltöltés nem sikerült! <br/>";
+        }
+    } else {
+        $uzenet = "<strong>Hiba:</strong> A fájl kiterjesztése nem megfelelő! <br/>";
+    }
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="hu">
@@ -46,16 +100,42 @@ session_start();
 </header>
 <main>
     <div class="page animation">
+        <div style="margin-top: 20%;margin-left: 20px;color: whitesmoke;">
         <?php
         // profiladatok kilistázása
-        echo "<ul>";
-        echo "<li>Felhasználónév: " . $_SESSION["user"]["felhasznalonev"] . "</li>";
+        echo "<ul style='list-style: none;'>";
+        echo "<li style='font-size: 40px'>FELHASZNÁLÓ ADATAI:</li>";
+        echo "<li style='font-size: 20px'>Név: " . $_SESSION["user"]["felhasznalonev"] . "</li>";
         echo "<li>Életkor: " . $_SESSION["user"]["eletkor"] . "</li>";
         echo "<li>Nem: " . $_SESSION["user"]["nem"] . "</li>";
         echo "<li>Hobbik: " . implode(", ", $_SESSION["user"]["hobbik"]) . "</li>";
+        if ($latogatasok > 1) {     // ha már korábban járt a felhasználó a weboldalunkon...
+            echo "Ez a(z) $latogatasok. alkalmad itt, örülünk, hogy újra látunk!";
+        } else {                    // ha első alkalommal látogatja meg a weboldalunkat...
+            echo "Ez az 1. alkalmad itt!";
+        }
         echo "</ul>";
         ?>
+        </div>
+        <div style="margin-left: 60%; margin-top: -10%">
+            <form method="POST" enctype="multipart/form-data">
+                <label for="file-upload" style="color: whitesmoke">PROFILKÉP:</label>
+                <!-- Csak képfájlokat szeretnénk engedélyezni a feltöltés során -->
+                <input style="color: whitesmoke" type="file" id="file-upload" name="profile-pic" accept="image/*"/> <br/>
+                <input type="submit" name="upload-btn" value="Feltöltés"/>
+                <div style="color: red">
+                    <?php echo $uzenet . "<br/>"; ?>
+                </div>
+            </form>
+        </div>
     </div>
+    <footer>
+        <div class="footer">
+            <div style="margin-top: 170px" class="bottom-text">
+                <a class="active" href="index.php">HOME</a>
+            </div>
+        </div>
+    </footer>
 </main>
 </body>
 </html>

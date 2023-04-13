@@ -58,14 +58,6 @@ session_start();
       </div>
     </div>
 
-    <footer>
-      <div class="footer">
-        <div class="bottom-text">
-          <a href="index.html">HOME</a>
-        </div>
-      </div>
-    </footer>
-
     <script>
       var navLinks = document.getElementById("navLinks");
       function showMenu() {

@@ -1,2 +1,1 @@
 a:5:{s:14:"felhasznalonev";s:6:"Akarmi";s:6:"jelszo";s:60:"$2y$10$OEJCKVkFKwFq4ToNiaYpEumExX9g54g9xKBiPfclbUIXHQY9f1urS";s:7:"eletkor";s:2:"21";s:3:"nem";s:1:"F";s:6:"hobbik";a:2:{i:0;s:6:"Futás";i:1;s:11:"Biciklizés";}}
-a:5:{s:14:"felhasznalonev";s:5:"Bence";s:6:"jelszo";s:60:"$2y$10$yRwxeBvFYaSVDcAGEHp/FOy7Uy/So.Arud.nrVjg1U3hfzrKqo.YW";s:7:"eletkor";s:2:"32";s:3:"nem";s:1:"F";s:6:"hobbik";a:2:{i:0;s:17:"Konditermi edzés";i:1;s:14:"Otthoni edzés";}}

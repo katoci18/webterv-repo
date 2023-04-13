@@ -85,16 +85,15 @@ session_start();
             </div>
           </div>
         </section>
-
-        <footer>
-          <div class="footer">
-            <div class="bottom-text">
-              <a class="active" href="index.php">HOME</a>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
+    <footer>
+        <div class="footer">
+            <div class="bottom-text">
+                <a class="active" href="index.php">HOME</a>
+            </div>
+        </div>
+    </footer>
 
 
     <script>

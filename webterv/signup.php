@@ -78,7 +78,6 @@
     <title>Home</title>
     <link rel="icon" href="IMG/dumbell.png" />
     <link rel="stylesheet" href="CSS/main.css" />
-    <link rel="stylesheet" href="CSS/signup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -110,40 +109,40 @@
 </header>
 <main>
     <div class="page animation">
-        <section><br/><br/><br/><br/>
-        <div class="signup">
-            <h2>Regisztráció:</h2>
-        <form action="signup.php" method="POST"><br/><br/>
-          <label><input type="text" name="felhasznalonev" value="<?php if (isset($_POST['felhasznalonev'])) echo $_POST['felhasznalonev']; ?>"/><strong>  Felhasználónév</strong></label> <br/>
-          <label><input type="password" name="jelszo"/><strong>  Jelszó</strong></label> <br/>
-          <label><input type="password" name="jelszo2"/><strong>  Jelszó ismét</strong></label> <br/>
-          <label><input type="number" name="eletkor" value="<?php if (isset($_POST['eletkor'])) echo $_POST['eletkor']; ?>"/> <strong> Életkor</strong></label> <br/>
-            <strong> Nem:</strong> <br/>
-          <label><input type="radio" name="nem" value="F" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'F') echo 'checked'; ?>/> Férfi</label>
-          <label><input type="radio" name="nem" value="N" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'N') echo 'checked'; ?>/> Nő</label>
-          <label><input type="radio" name="nem" value="E" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'E') echo 'checked'; ?>/> Egyéb</label> <br/>
-            <strong> Hobbik:</strong> <br/>
-          <label><input type="checkbox" name="hobbik[]" value="Futás" <?php if (isset($_POST['hobbik']) && in_array('Futás', $_POST['hobbik'])) echo 'checked'; ?>/> Futás</label>
-          <label><input type="checkbox" name="hobbik[]" value="Biciklizés" <?php if (isset($_POST['hobbik']) && in_array('Biciklizés', $_POST['hobbik'])) echo 'checked'; ?>/> Biciklizés</label>
-          <label><input type="checkbox" name="hobbik[]" value="Konditermi edzés" <?php if (isset($_POST['hobbik']) && in_array('Konditermi edzés', $_POST['hobbik'])) echo 'checked'; ?>/> Konditermi edzés</label>
-          <label><input type="checkbox" name="hobbik[]" value="Otthoni edzés" <?php if (isset($_POST['hobbik']) && in_array('Otthoni edzés', $_POST['hobbik'])) echo 'checked'; ?>/> Otthoni edzés</label>
-          <br/>
-            <input type="submit" name="regiszt" value="Regisztráció"/> <br/><br/>
-        </form>
-        </div>
-        <div class="message">
-        <?php
-          if (isset($siker) && $siker === TRUE) {  // ha nem volt hiba, akkor a regisztráció sikeres
-            echo "<p>Sikeres regisztráció!</p>";
-          } else {                                // az esetleges hibákat kiírjuk egy-egy bekezdésben
-            foreach ($hibak as $hiba) {
-              echo "<p>" . $hiba . "</p>";
-            }
-          }
-        ?>
-        </div>
-      </section>
+        <section>
+            <div style="display: flex; justify-content: center; margin-top: 20%; color: whitesmoke">
+                <h2>Regisztráció:</h2>
+                <form action="signup.php" method="POST"><br/><br/>
+                    <label><input type="text" name="felhasznalonev" value="<?php if (isset($_POST['felhasznalonev'])) echo $_POST['felhasznalonev']; ?>"/><strong>  Felhasználónév</strong></label> <br/>
+                    <label><input type="password" name="jelszo"/><strong>  Jelszó</strong></label> <br/>
+                    <label><input type="password" name="jelszo2"/><strong>  Jelszó ismét</strong></label> <br/>
+                    <label><input type="number" name="eletkor" value="<?php if (isset($_POST['eletkor'])) echo $_POST['eletkor']; ?>"/> <strong> Életkor</strong></label> <br/>
+                    <strong> Nem:</strong> <br/>
+                    <label><input type="radio" name="nem" value="F" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'F') echo 'checked'; ?>/> Férfi</label>
+                    <label><input type="radio" name="nem" value="N" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'N') echo 'checked'; ?>/> Nő</label>
+                    <label><input type="radio" name="nem" value="E" <?php if (isset($_POST['nem']) && $_POST['nem'] === 'E') echo 'checked'; ?>/> Egyéb</label> <br/>
+                    <strong> Hobbik:</strong> <br/>
+                    <label><input type="checkbox" name="hobbik[]" value="Futás" <?php if (isset($_POST['hobbik']) && in_array('Futás', $_POST['hobbik'])) echo 'checked'; ?>/> Futás</label>
+                    <label><input type="checkbox" name="hobbik[]" value="Biciklizés" <?php if (isset($_POST['hobbik']) && in_array('Biciklizés', $_POST['hobbik'])) echo 'checked'; ?>/> Biciklizés</label>
+                    <label><input type="checkbox" name="hobbik[]" value="Konditermi edzés" <?php if (isset($_POST['hobbik']) && in_array('Konditermi edzés', $_POST['hobbik'])) echo 'checked'; ?>/> Konditermi edzés</label>
+                    <label><input type="checkbox" name="hobbik[]" value="Otthoni edzés" <?php if (isset($_POST['hobbik']) && in_array('Otthoni edzés', $_POST['hobbik'])) echo 'checked'; ?>/> Otthoni edzés</label>
+                    <br/>
+                    <input type="submit" name="regiszt" value="Regisztráció"/> <br/><br/>
+                </form>
+                <div class="message">
+                    <?php
+                    if (isset($siker) && $siker === TRUE) {  // ha nem volt hiba, akkor a regisztráció sikeres
+                        echo "<p>Sikeres regisztráció!</p>";
+                    } else {                                // az esetleges hibákat kiírjuk egy-egy bekezdésben
+                        foreach ($hibak as $hiba) {
+                            echo "<p>" . $hiba . "</p>";
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </section>
     </div>
-    </main>
-  </body>
+</main>
+</body>
 </html>

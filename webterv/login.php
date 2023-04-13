@@ -23,7 +23,7 @@ include "kozos.php";              // a loadUsers() függvény ebben a fájlban v
         if ($fiok["felhasznalonev"] === $felhasznalonev && password_verify($jelszo, $fiok["jelszo"])) {
           $uzenet = "Sikeres belépés!";        // ekkor átírjuk a megjelenítendő üzenet szövegét
             $_SESSION["user"] = $fiok;
-            header("Location: index.php");
+            header("Location: profil.php");
         }
       }
     }
@@ -38,7 +38,6 @@ include "kozos.php";              // a loadUsers() függvény ebben a fájlban v
     <title>Home</title>
     <link rel="icon" href="IMG/dumbell.png" />
     <link rel="stylesheet" href="CSS/main.css" />
-    <link rel="stylesheet" href="CSS/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,12 +68,12 @@ include "kozos.php";              // a loadUsers() függvény ebben a fájlban v
 </header>
 <main>
     <div class="page animation">
-    <section><br/><br/><br/><br/>
-        <div class="signup">
+    <section>
+        <div style="display: flex; justify-content: center; margin-top: 20%; color: whitesmoke">
             <h2>Bejelentkezés:</h2>
         <form action="login.php" method="POST"><br/><br/>
-            <label><input type="text" name="felhasznalonev"/>  Felhasználónév</label> <br/>
-            <label><input type="password" name="jelszo"/>  Jelszó</label> <br/>
+            <label><input type="text" name="felhasznalonev"/> <strong> Felhasználónév</strong></label> <br/>
+            <label><input type="password" name="jelszo"/> <strong>  Jelszó</strong></label> <br/>
             <input type="submit" name="login" value="Bejelentkezés"/> <br/><br/>
         </form>
         </div>
@@ -86,6 +85,13 @@ include "kozos.php";              // a loadUsers() függvény ebben a fájlban v
         </div>
     </section>
     </div>
+    <footer>
+        <div class="footer">
+            <div style="margin-top: 5%" class="bottom-text">
+                <a class="active" href="index.php">HOME</a>
+            </div>
+        </div>
+    </footer>
     </main>
   </body>
 </html>
